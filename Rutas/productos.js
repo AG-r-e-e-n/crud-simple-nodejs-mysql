@@ -1,12 +1,10 @@
-const { Router } = require('express');
 const express = require('express')
 const rutas = express.Router();
+const {getProducts} = require('../Controlador/products') 
 
 // Todo el CRUD va aquí dentro 
 
-rutas.get("/productos", (req, res) => {
-    res.send("Hola mundo")
-})
+rutas.get("/products", getProducts);
 
 
 module.exports = rutas
